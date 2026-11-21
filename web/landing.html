@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipMaxxing: AI clip maker that turns long videos into viral Shorts</title>
+<meta name="description" content="ClipMaxxing turns long YouTube videos, podcasts and streams into captioned vertical Shorts and Reels. AI finds the best moments, adds animated English captions, and uploads straight to YouTube.">
+<link rel="canonical" href="{{SITE}}/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0A0A10">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClipMaxxing">
+<meta property="og:url" content="{{SITE}}/">
+<meta property="og:title" content="ClipMaxxing: long videos in, viral shorts out">
+<meta property="og:description" content="AI finds the best moments of any long video and turns them into captioned vertical shorts you can edit and upload to YouTube in one click.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ClipMaxxing", "applicationCategory": "MultimediaApplication", "operatingSystem": "Web browser", "url": "{{SITE}}/", "image": "{{SITE}}/brand/logo.svg", "description": "AI clip maker that turns long videos into captioned vertical shorts and uploads them to YouTube."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#FF4D8D;--pink:#FFA63D;--grad:linear-gradient(135deg,#8A2BE2 0%,#FF4D8D 52%,#FFA63D 100%);
+  --bg:#0B0614;--card:#170D26;--muted:#211433;--line:#2B1C42;--text:#F5EEFC;--dim:#C2B0DA;--faint:#8E7AAA;--deep:#FFB3CF;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:"Plus Jakarta Sans","Inter",sans-serif;letter-spacing:-.03em;color:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 22px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid #3A2754;background:var(--muted);color:var(--text);transition:filter .15s ease,background-color .15s ease}
+.btn:hover{background:#2A1A40}
+.btn.primary{background:var(--grad);border:0;color:#fff}.btn.primary:hover{filter:brightness(1.1)}
+.btn svg{width:20px;height:20px}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(11,6,20,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.05)}
+header .wrap{display:flex;align-items:center;gap:28px;height:68px}
+header img{height:34px;display:block}
+header nav{display:flex;gap:24px;font-size:14px;color:var(--dim);margin-left:12px}
+header nav a:hover{color:#fff}
+header .cta{margin-left:auto;display:flex;gap:10px}
+header .btn{height:40px;padding:0 16px;font-size:14px}
+@media (max-width:860px){header nav{display:none}header .btn.ghost{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:88px 0 72px}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:720px;background:radial-gradient(600px 340px at 30% 30%,rgba(255,77,141,.35),transparent 70%),radial-gradient(520px 320px at 75% 20%,rgba(255,166,61,.25),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--deep);background:rgba(255,77,141,.14);border:1px solid rgba(255,77,141,.4)}
+.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:800;margin:20px 0 18px}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:var(--dim);max-width:560px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .ctas .btn{height:54px;padding:0 26px;font-size:16px}
+.hero .trust{margin-top:22px;font-size:13px;color:var(--faint);display:flex;gap:18px;flex-wrap:wrap}
+.hero .trust span::before{content:"✓ ";color:#2EE6C5}
+/* phone mock */
+.phone{justify-self:center;width:300px;aspect-ratio:9/16;border-radius:36px;padding:10px;background:linear-gradient(160deg,#3a1f5c,#140a24);box-shadow:0 40px 120px rgba(255,77,141,.35),inset 0 0 0 1px rgba(255,255,255,.08)}
+.screen{position:relative;height:100%;border-radius:28px;overflow:hidden;background:#0B0B0C;display:flex;flex-direction:column}
+.screen .top{flex:0 0 30%;display:grid;place-items:center;padding:0 18px;text-align:center;font:800 22px/1.1 "Plus Jakarta Sans",sans-serif;color:#fff;text-transform:uppercase}
+.screen .vid{flex:0 0 36%;background:linear-gradient(135deg,#5B1E8C,#FF4D8D 40%,#FFA63D);position:relative;overflow:hidden}
+.screen .vid::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 70%,rgba(255,255,255,.25),transparent 45%)}
+.screen .vid i{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(4px)}
+.screen .vid i::after{content:"";position:absolute;left:22px;top:17px;border-left:16px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.screen .cap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.cap .words{font:400 30px/1 "Anton",sans-serif;color:#fff;letter-spacing:.02em;text-transform:uppercase;-webkit-text-stroke:1px #000}
+.cap .words b{font-weight:400;color:#14FF39;background:none;animation:pop 1.6s ease-in-out infinite}
+.cap .words b.box{color:#111;background:#14FF39;padding:0 6px;border-radius:4px;-webkit-text-stroke:0}
+.cap small{font:700 12px "Plus Jakarta Sans",sans-serif;color:#FF9BD2}
+@keyframes pop{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr}.phone{width:250px}}
+/* sections */
+section{padding:88px 0}
+.head{max-width:680px;margin-bottom:44px}
+.head h2{font-size:clamp(30px,4vw,44px);line-height:1.1;font-weight:800;margin-top:14px}
+.head p{color:var(--dim);margin-top:12px;font-size:17px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:26px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.step .n{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--grad);margin-bottom:18px}
+.step h3{font-size:19px;margin-bottom:8px}.step p{color:var(--dim);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{padding:26px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent),var(--card);border:1px solid var(--line);transition:border-color .2s ease,transform .2s ease}
+.feat:hover{border-color:rgba(255,77,141,.5);transform:translateY(-2px)}
+.feat .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,77,141,.15);color:var(--deep);margin-bottom:18px}
+.feat .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat h3{font-size:18px;margin-bottom:8px}.feat p{color:var(--dim);font-size:15px}
+@media (max-width:920px){.steps,.grid{grid-template-columns:1fr}}
+.styles{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.styles span{padding:10px 16px;border-radius:12px;background:#07040D;border:1px solid var(--line);font:800 15px "Plus Jakarta Sans",sans-serif;color:#fff}
+.styles span b{font-weight:800}
+.closing{text-align:center;padding:96px 0 110px}
+.closing .box{padding:64px 24px;border-radius:28px;border:1px solid rgba(255,77,141,.35);background:radial-gradient(600px 260px at 50% 0%,rgba(255,77,141,.3),transparent 70%),var(--card)}
+.closing h2{font-size:clamp(30px,4.4vw,50px);font-weight:800;line-height:1.1}
+.closing p{color:var(--dim);margin:14px auto 30px;max-width:520px;font-size:17px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--faint);font-size:14px}
+footer .wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+footer img{height:26px}
+footer nav{margin-left:auto;display:flex;gap:18px}footer a:hover{color:#fff}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.hero{padding-bottom:230px}
+.hero .vc-scene{position:absolute;left:0;bottom:0;width:100%;height:50%;object-fit:cover;object-position:center bottom;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 40%);mask-image:linear-gradient(to bottom,transparent 0%,#000 40%)}
+.hero h1{text-shadow:0 4px 40px rgba(255,77,141,.25)}
+.social{display:flex;gap:10px}
+.social a{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--muted);border:1px solid var(--line);color:var(--dim)}
+.social a:hover{color:#fff;border-color:#FF4D8D}
+.social svg{width:18px;height:18px;fill:currentColor}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" aria-label="ClipMaxxing home"><img src="/brand/logo-light.svg" alt="ClipMaxxing"></a>
+  <nav aria-label="Sections"><a href="#how">How it works</a><a href="#features">Features</a><a href="#styles">Caption styles</a></nav>
+  <div class="cta"><a class="btn ghost" href="https://github.com/kumar-whale" target="_blank" rel="noopener">Star on GitHub</a><a class="btn ghost" href="/login">Sign in</a><a class="btn primary" href="/signup">Start clipping</a></div>
+</div></header>
+
+<section class="hero"><img class="vc-scene" src="/brand/sunset.svg" alt="" aria-hidden="true"><div class="wrap">
+  <div>
+    <span class="kicker">AI clip studio</span>
+    <h1>Long videos in.<br><span class="gt">Viral shorts out.</span></h1>
+    <p class="lead">Paste a YouTube link. ClipMaxxing reads the whole video, finds the moments people will stop scrolling for, and cuts them into vertical shorts with animated English captions, ready to upload.</p>
+    <div class="ctas">
+      <a class="btn primary" href="/signup">Start clipping free</a>
+      <a class="btn" href="/login"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF0000" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81z"/><path fill="#fff" d="M9.55 15.57V8.43L15.82 12z"/></svg>Continue with YouTube</a>
+    </div>
+    <div class="trust"><span>Hours-long videos</span><span>10s to 90s reels</span><span>One-click YouTube upload</span></div>
+  </div>
+  <div class="phone" aria-hidden="true"><div class="screen">
+    <div class="top">Why most channels never grow</div>
+    <div class="vid"><i></i></div>
+    <div class="cap"><div class="words">They post <b class="box">without</b> a hook</div><small>The one mistake 90% of creators make</small></div>
+  </div></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="head"><span class="kicker">How it works</span><h2>From a one-hour video to a week of shorts.</h2></div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Paste a link or upload</h3><p>Any YouTube video, podcast, interview or stream. Pick a reel length: 10, 20, 30, 60 or 90 seconds.</p></div>
+    <div class="step"><div class="n">2</div><h3>AI finds the best moments</h3><p>The full transcript is read and every strong moment is scored: hot takes, tips, stories, emotional and funny parts. Each becomes its own reel.</p></div>
+    <div class="step"><div class="n">3</div><h3>Edit, then upload</h3><p>Change the headline, fix a caption, cut out a bad part, then send it to YouTube with your own title and description.</p></div>
+  </div>
+</div></section>
+
+<section id="features" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="kicker">Features</span><h2>Everything a short needs. <span class="gt">Nothing it doesn't.</span></h2></div>
+  <div class="grid">
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div><h3>Finds the moments</h3><p>AI reads the whole video, not just the loud parts, and picks moments that work on their own for a stranger.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><h3>English captions, always</h3><p>Hindi, Urdu or any language goes in; clean English captions, headline and title come out.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M6 8h12M6 16h12"/></svg></div><h3>Headline layout</h3><p>Big text on top, the video in the middle, captions and a line of text below. Inside every platform's safe area.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>Cut the bad parts</h3><p>Mark a part to remove, cut a whole caption line, or drop every long pause in one click. Captions follow the cut.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div><h3>Upload to YouTube</h3><p>Sign in with YouTube once. Then upload any short with its title, description, tags and visibility, right from the editor.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Built for volume</h3><p>A fair queue, background rendering and per-clip re-renders, so a whole team can clip at once.</p></div>
+  </div>
+</div></section>
+
+<section id="styles" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="kicker">Caption styles</span><h2>Twelve animated caption styles.</h2><p>Word-by-word timing on every one. Switch styles per clip in the editor.</p></div>
+  <div class="styles">
+    <span>CLIP <b style="color:#00F0FF">THIS</b> · Bounce</span><span style="font-family:Anton">CLIP <b style="color:#FF3C3C">THIS</b> · Hype</span><span>Clip <b style="color:#6BD7FF">this</b> · Clean</span>
+    <span>CLIP <b style="background:#14FF39;color:#111;padding:0 5px;border-radius:4px">THIS</b> · Box highlight</span><span>CLIP <b style="color:#FFD400">THIS</b> · Word reveal</span>
+    <span style="font-family:Anton"><b style="color:#FFE100">THIS</b> · One word</span><span>CLIP <b style="text-shadow:0 0 8px #FF4FA3,0 0 14px #FF4FA3">THIS</b> · Neon glow</span>
+    <span>CLIP <b style="color:#7C5CFF">THIS</b> · Slide up</span><span>clip <b style="color:#C8B4FF">this</b> · Minimal</span>
+    <span>CLIP <b style="background:linear-gradient(90deg,#FFA63D 55%,#fff 55%);-webkit-background-clip:text;background-clip:text;color:transparent">THIS</b> · Karaoke fill</span>
+    <span style="font-family:Anton">CLIP <b style="text-shadow:0 0 8px #FFA63D,0 0 14px #FF4D8D">THIS</b> · Sunset neon</span>
+    <span>CLIP <b style="color:#2EE6C5;display:inline-block;transform:rotate(-7deg)">THIS</b> · Wobble</span>
+  </div>
+</div></section>
+
+<section class="closing"><div class="wrap"><div class="box">
+  <h2>Your next video is <span class="gt">ten shorts</span> waiting to happen.</h2>
+  <p>Sign in with YouTube and make your first clips in a few minutes.</p>
+  <a class="btn primary" href="/signup" style="height:54px;padding:0 28px">Start clipping free</a>
+</div></div></section>
+
+<footer><div class="wrap">
+  <img src="/brand/logo-light.svg" alt="ClipMaxxing"><span>© <span class="fy"></span> ClipMaxxing</span>
+  <div class="social"><a href="https://github.com/kumar-whale" target="_blank" rel="noopener" aria-label="ClipMaxxing on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.4-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a><a href="https://www.instagram.com/tnr.visualai/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.8a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a></div><nav><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/acceptable-use">Acceptable use</a></nav>
+</div></footer>
+<script>document.querySelectorAll(".fy").forEach(e => e.textContent = new Date().getFullYear());</script>
+</body>
+</html>
